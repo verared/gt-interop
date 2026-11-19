@@ -1,0 +1,29 @@
+{
+  "schema": "gus-3339-negative-001",
+  "gus_version": "2.5.0b1",
+  "profile": "GUS-3339 (casos negativos compartidos: una entrada inválida se rechaza con GERO_*, nunca se normaliza)",
+  "source": "hallazgo F1 del informe técnico independiente (reproducido en 2026-11: aceptaba 25:00:00, 23:70:00, :61)",
+  "deterministic": true,
+  "note_c": "impl-c no implementa el parser de strings GUS-3339; su superficie equivalente es gus_instant_from_parts (sección instant_parts).",
+  "reject_rfc3339": [
+    {"rfc3339": "2026-11-17T25:00:00Z", "why": "hora 25 > 23"},
+    {"rfc3339": "2026-11-17T23:70:00Z", "why": "minuto 70 > 59"},
+    {"rfc3339": "2026-11-17T23:59:61Z", "why": "segundo 61 > 59"},
+    {"rfc3339": "2026-11-17T23:59:60Z", "why": "segundo intercalar :60 no pertenece a la escala GUS (MUST del perfil)"},
+    {"rfc3339": "2026-02-30T00:00:00Z", "why": "fecha inexistente (feb 30)"},
+    {"rfc3339": "2026-13-01T00:00:00Z", "why": "mes 13 inexistente"},
+    {"rfc3339": "2026-04-31T00:00:00Z", "why": "día 31 en mes de 30"},
+    {"rfc3339": "10000-01-01T00:00:00Z", "why": "año fuera de 0000-9999"},
+    {"rfc3339": "2026-11-17T16:15:00+01:00", "why": "offset de zona no admitido (solo Z)"},
+    {"rfc3339": "2026-11-17t16:15:00z", "why": "separadores en minúscula fuera del perfil canónico"},
+    {"rfc3339": "2026-11-17 16:15:00Z", "why": "espacio en vez de T"},
+    {"rfc3339": "2026-11-17T16:15:00.500Z", "why": "fracciones no admitidas por el perfil"}
+  ],
+  "instant_parts": [
+    {"day_index": 0, "hour": 24, "minute": 0, "second": 0, "why": "hora 24 fuera de 00-23"},
+    {"day_index": 0, "hour": 23, "minute": 60, "second": 0, "why": "minuto 60 fuera de 00-59"},
+    {"day_index": 0, "hour": 23, "minute": 59, "second": 60, "why": "segundo 60 fuera de 00-59"},
+    {"day_index": 0, "hour": -1, "minute": 0, "second": 0, "why": "hora negativa"},
+    {"day_index": 0, "hour": 23, "minute": 59, "second": 61, "why": "segundo 61 fuera de rango"}
+  ]
+}

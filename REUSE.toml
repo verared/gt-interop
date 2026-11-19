@@ -1,0 +1,28 @@
+version = 1
+
+# Export generado por tools/export_module.py (fuente: verared/gerarion v3.2.0).
+# Cobertura completa del paquete (precedencia override).
+
+# code — MIT OR Apache-2.0
+
+[[annotations]]
+precedence = "override"
+path = ["src/gerarion/interop/__init__.py", "src/gerarion/interop/profiles.py", "src/gerarion/interop/tsa.py"]
+SPDX-License-Identifier = "MIT OR Apache-2.0"
+SPDX-FileCopyrightText = "2026 verared contributors"
+
+# docs — CC-BY-4.0
+
+[[annotations]]
+precedence = "override"
+path = ["NOTICE", "README.es.md", "README.md", "docs/specs/INTEROP.en.md", "docs/specs/INTEROP.es.md"]
+SPDX-License-Identifier = "CC-BY-4.0"
+SPDX-FileCopyrightText = "2026 verared contributors"
+
+# vectors + andamiaje — CC0-1.0
+
+[[annotations]]
+precedence = "override"
+path = ["vectors/gus-3339-002.json", "vectors/gus-3339-negative-001.json"]
+SPDX-License-Identifier = "CC0-1.0"
+SPDX-FileCopyrightText = "2026 verared contributors"

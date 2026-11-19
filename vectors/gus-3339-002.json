@@ -1,0 +1,111 @@
+{
+  "schema": "gus-3339-002",
+  "gus_version": "3.0.0",
+  "profile": "GUS-3339 (instante GUS <-> RFC 3339 UTC, perfil estricto Z) — puente GUS 3.0.0: unix -> TAI (tabla IERS, +37 s) -> TCJ (= TAI+8400 s) -> GUS",
+  "source": "src/gerarion/profiles.py + src/gerarion/tai.py (GUS 3.0.0)",
+  "deterministic": true,
+  "constant": {
+    "name": "GUS_UNIX_OFFSET",
+    "value": 62318160000,
+    "definition": "instant GUS of 1970-01-01T00:00:00TCJ = (2440588 - 1719313) * 86400; el puente aplica además tai_minus_utc + TCJ_OFFSET_SECONDS",
+    "TCJ_OFFSET_SECONDS": 8400,
+    "tai_minus_utc_current": 37
+  },
+  "gus3339": [
+    {
+      "op": "map",
+      "ins": 150949200,
+      "rfc3339": "0000-01-01T00:00:00Z"
+    },
+    {
+      "op": "map",
+      "ins": 62318168410,
+      "rfc3339": "1970-01-01T00:00:00Z"
+    },
+    {
+      "op": "map",
+      "ins": 63269996128,
+      "rfc3339": "2000-02-29T12:34:56Z"
+    },
+    {
+      "op": "map",
+      "ins": 63801397235,
+      "rfc3339": "2016-12-31T23:59:59Z"
+    },
+    {
+      "op": "map",
+      "ins": 64091830837,
+      "rfc3339": "2026-03-16T12:00:00Z"
+    },
+    {
+      "op": "map",
+      "ins": 64091874037,
+      "rfc3339": "2026-03-17T00:00:00Z"
+    },
+    {
+      "op": "map",
+      "ins": 64097697037,
+      "rfc3339": "2026-05-23T09:30:00Z"
+    },
+    {
+      "op": "map",
+      "ins": 315720469236,
+      "rfc3339": "9999-12-31T23:59:59Z"
+    },
+    {
+      "op": "map",
+      "ins": 61939477210,
+      "rfc3339": "1958-01-01T00:00:00Z"
+    },
+    {
+      "op": "map",
+      "ins": 62396965211,
+      "rfc3339": "1972-07-01T00:00:00Z"
+    },
+    {
+      "op": "map",
+      "ins": 63801397237,
+      "rfc3339": "2017-01-01T00:00:00Z"
+    },
+    {
+      "op": "map",
+      "ins": 60424712400,
+      "rfc3339": "1910-01-01T00:00:00Z"
+    },
+    {
+      "op": "leap_delta",
+      "before": "2016-12-31T23:59:59Z",
+      "after": "2017-01-01T00:00:00Z",
+      "delta_instant": 2
+    }
+  ],
+  "gus3339_canonical": [
+    {
+      "ins": 64097697037,
+      "rfc3339": "2026-05-23T09:30:00Z",
+      "gus_canonical": "2031DY-03-08-T-11:50:37-SC-TCJ+0"
+    },
+    {
+      "ins": 64091830837,
+      "rfc3339": "2026-03-16T12:00:00Z",
+      "gus_canonical": "2030DY-00-04-B-14:20:37-SC-TCJ+0"
+    },
+    {
+      "ins": 63269996128,
+      "rfc3339": "2000-02-29T12:34:56Z",
+      "gus_canonical": "2004DY-12-21-S-14:55:28-SC-TCJ+0"
+    }
+  ],
+  "tcj_equivalent_views": [
+    {
+      "instant": 64097697037,
+      "stamps": [
+        "2031DY-03-08-T-11:50:37-SC-TCJ+0",
+        "2031DY-03-08-T-09:30:37-SC-TCJ-2:20",
+        "2031DY-03-08-T-06:30:37-SC-TCJ-5:20",
+        "2031DY-03-08-T-15:00:37-SC-TCJ+3:10",
+        "2031DY-03-08-T-17:30:37-SC-TCJ+5:40"
+      ]
+    }
+  ]
+}
