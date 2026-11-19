@@ -1,6 +1,6 @@
 # Puentes con estándares heredados
 
-Parte de la suite de referencia **Gerarion** (verared/gerarion `v3.2.0`,
+Parte de la suite de referencia **Gerarion** (verared/gerarion `v3.2.2`,
 Gerarion Universal Standard). Este directorio es un **paquete de
 exportación** listo para publicarse (o consumirse) como repositorio
 satélite `verared/gt-interop`; conserva las rutas relativas del repositorio
@@ -12,18 +12,21 @@ Conversión exacta y auditable entre GUS y RFC 3339 / ISO 8601 / Unix, y el perf
 
 ## Estado normativo
 
-- **Estable (RFC 3339) / Experimental (RFC 3161)** — línea base `v3.2.0` (aritmética y vectores
+- **Estable (RFC 3339) / Experimental (RFC 3161)** (`maturity: stable`) — línea base `v3.2.2` (aritmética y vectores
   congelados: GUS v3.0.0).
 - Especificación(es) incluida(s): `docs/specs/INTEROP.es.md`, `docs/specs/INTEROP.en.md`
+- Manifiesto de integridad verificable: [`EXPORT-MANIFEST.json`](EXPORT-MANIFEST.json)
+- Matriz oficial de compatibilidad: [`COMPATIBILITY.md`](https://github.com/verared/gerarion/blob/v3.2.2/COMPATIBILITY.md)
 
 ## Dependencias
 
 - `gt-core` (*verared/gt-core*): tipos base y servicios del núcleo.
 - `gt-tcj` (*verared/gt-tcj*): módulo hermano de esta suite.
-Base común: `verared/gerarion` `v3.2.0`.
+Base común: `verared/gerarion` `v3.2.2`.
 
 ## Contenido
 
+- `EXPORT-MANIFEST.json`
 - `LICENSE`
 - `NOTICE`
 - `docs/specs/INTEROP.en.md`
@@ -51,10 +54,16 @@ reuse lint                                    # licencias al 100 %
 # (las pruebas viven en la suite de verared/gerarion)
 ```
 
+Desde `verared/gerarion`, la integridad completa contra `EXPORT-MANIFEST.json` se verifica con:
+
+```bash
+python3 tools/export_module.py --verify-existing /ruta/a/gt-interop
+```
+
 ## Contrato de sincronización con `verared/gerarion`
 
 Este paquete es **generado, no editado a mano**: se regenera byte a
-byte desde `verared/gerarion v3.2.0` con
+byte desde `verared/gerarion v3.2.2` con
 `python3 tools/export_module.py --module gt-interop --out <dir>`. La fuente
 de verdad normativa (especificaciones, vectores CC0, núcleos de
 referencia de las tres plataformas y la batería completa) permanece en

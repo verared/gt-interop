@@ -1,0 +1,31 @@
+{
+  "schema": "gerarion-export-manifest/1",
+  "module": "gt-interop",
+  "version": "3.2.2",
+  "maturity": "stable",
+  "source_repo": "verared/gerarion",
+  "source_tag": "v3.2.2",
+  "source_commit": "322a650bd6bced29492fdb2e4dd1113828421ebe",
+  "dependencies": {
+    "gt-core": ">=3.2.0,<4.0.0",
+    "gt-tcj": ">=3.2.0,<4.0.0"
+  },
+  "files": {
+    "LICENSE": "5100ec704387838d4b95d6fd6a98d82fe8ee918e470994440c44801cd66b0cd0",
+    "LICENSES/Apache-2.0.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "LICENSES/CC-BY-4.0.txt": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+    "LICENSES/CC0-1.0.txt": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+    "LICENSES/MIT.txt": "757fbdb81df81bd060d17276424bd4fc26269e780599988c3ce8fba4260b0b20",
+    "NOTICE": "6af3a8bb6fe83f1b2d2f3d76528ab1f2b8e56da842c1de81673385821513e835",
+    "README.es.md": "d903ec7ded9eac32947e7c09fc8252c1bd1b6c5019d6f9aa95f2e716b2f3f329",
+    "README.md": "d2df041b133f956b9b8d87b3261cb2d65142ad79b4bd0877d2f557fe7c701f53",
+    "REUSE.toml": "e0a3be914c3c15f1207a640ebbe1e46fcd1d8ab0681342900a707a418783c474",
+    "docs/specs/INTEROP.en.md": "d02dfe436bbe748c5a43011893f5d48733e95fd958977b8b44878f42c22aad72",
+    "docs/specs/INTEROP.es.md": "2f77a08ea7380d301333cca6ee2f880ee84178e8b174b769681d04bf001f71c0",
+    "src/gerarion/interop/__init__.py": "569b141d7cd3bd085ff67bb8cc5c95c242b9641dad171617f6bcd89100d2df99",
+    "src/gerarion/interop/profiles.py": "6b872c47a2e075e6fe40722950de25d0d40c0544a3d9d4d545a6cecac0e4758f",
+    "src/gerarion/interop/tsa.py": "8550466824f965ae2b17f78f739690e12da8dd1a12e2de92c8d057da518ad5b7",
+    "vectors/gus-3339-002.json": "98996463314bb05e1a2c013819c27b9d0ed2b20dc80664b3f908d17295acc355",
+    "vectors/gus-3339-negative-001.json": "52d3c3b0f8aee75114990d88473bc3eba1608ae0e80a2db5f8f66041f51fb5c7"
+  }
+}
